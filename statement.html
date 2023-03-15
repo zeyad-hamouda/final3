@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>statement</title>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #transactions {
+      border: 1px solid #013877;
+      padding: 10px;
+      font-size: 33px;
+      text-align: center;
+
+    }
+
+    #amount,
+    #type,
+    #balance {
+      font-size: 25px;
+      padding: 5px;
+      margin-top: 80px;
+      ;
+      color: black;
+    }
+
+    button[type="button"] {
+      font-size: 20px;
+      padding: 5px 15px;
+      border-radius: 3px;
+
+
+    }
+
+    .header {
+      height: 150px;
+      background-color: #013877;
+
+    }
+
+    .footer {
+      margin-top: 250px;
+      height: 150px;
+      background-color: #013877;
+
+    }
+
+    #logo {
+      width: 230px;
+      height: 240px;
+      margin-top: -30px;
+    }
+
+    .cn {
+      background-color: white;
+      margin-top: 20px;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 5px;
+    }
+
+    label,
+    p {
+      font-size: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="header">
+    <center>
+      <img src="img/Legacy_Bank.png" id="logo">
+    </center>
+  </div>
+  <div class="cn">
+    <form>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount">
+      <label for="type">Type:</label>
+      <select id="type">
+        <option value="deposit">Deposit</option>
+        <option value="withdrawal">Withdrawal</option>
+      </select>
+      <button type="button" onclick="addTransaction()">Add Transaction</button>
+      <p>Balance: <span id="balance"></span></p>
+      <ul id="transactions"></ul>
+
+    </form>
+
+
+
+
+  </div>
+
+  
+</body>
+<script src="statement.js"></script>
+
+</html>

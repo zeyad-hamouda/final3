@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign</title>
+	<link rel="stylesheet" type="text/css" href="style4.css">
+	
+	<script type="text/javascript">
+		
+	const form = document.getElementById('login');
+	form.addEventListener('submit', function(e) {
+  	e.preventDefault(); 
+	  
+  const name = document.getElementById('name').value;
+  const pass = document.getElementById('pass').value;
+  const u = JSON.parse(localStorage.getItem('userM')); // make all localhost the same
+	  
+
+ 
+});
+
+		</script>
+		<style>
+	
+		header {
+     		height: 150px;
+     		background-color: #013877;
+
+   		}
+		* {
+      		margin: 0px;
+      		padding: 0px;
+    	}
+
+		#logo {
+     		width: 230px;
+      		height: 240px;
+      		margin-top: -30px;
+    	}
+
+		.one{
+			margin-top: 20px;
+			margin-left: 150px;
+			margin-right: 300px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+        <center>
+            <img src="img/Legacy_Bank.png" id="logo">
+        </center>
+	</header>
+
+	
+				<form id="upform">
+					<center>
+					<div>
+						<label for="name">Username:</label>
+						<input type="text" id="name" name="name" required>
+					</div>
+					<div>
+						<label for="email">Email:</label>
+						<input type="email" id="email" name="email" required>
+					</div>
+					<div>
+						<label for="pass">Password:</label>
+						<input type="password" id="pass" name="pass" required>
+					</div>
+					<div>
+						<label for="dob">Date of Birth:</label>
+						<input type="date" id="dob" name="dob" required>
+					</div>
+					<button type="submit">Sign Up</button>
+					<button type="button"><a href="signin.html" style="color: white; text-decoration: none;"> Already have an account? Sign in</a> </button>
+				
+				</center></form>
+			
+</body>
+</html>

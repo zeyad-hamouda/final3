@@ -3,6 +3,17 @@
     padding: 0%;
 }
 
+.header {
+    height: 150px;
+    background-color: #013877;
+}
+
+.header img {
+    margin-top: -30px;
+    width: 230px;
+    height: 240px;
+
+}
 
 .container {
     width: 100%;
@@ -11,11 +22,10 @@
 
 .main {
     min-height: 700px;
-    background: url(img/bground.jpeg);
+    background: url(./img/car.jpeg);
     background-repeat: no-repeat;
     background-size: contain;
-    margin-left: 250px;
-    margin-top:40px;
+    margin-left: 450px;
 }
 
 
@@ -28,9 +38,9 @@
     background-color: rgba(255, 255, 255, 0.734);
     border-radius: 10px;
     margin-top: 140px;
-    border-color: #2738A4;
+    border-color: #013877;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
-    
+
 }
 
 .box h1 {
@@ -51,7 +61,7 @@
 
 .box button {
     margin-left: 250px;
-    background-color: #2738A4;
+    background-color: #013877;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -135,118 +145,79 @@
     position: relative;
     margin-bottom: 100px;
 }
-i{
-    font-size: 200px;
-}
-.next2 {
+
+.next2{
     height: 830px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(39, 56, 164)), url(img/twopeople.jpg);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(1,56,119,255)), url(img/manpay.png);
     background-size: cover;
 }
-.n2 i {
+.n2 img {
     margin-top: 250px;
     margin-left: 1500px;
-    
+
 }
-.n2 h2{
+.n2 h1{
     font-size: 50px;
-    margin-left: 1380px;
+    margin-left: 1300px;
     margin-top: 15px;
     color: white;
 }
 
 .n2 p{
     font-size: 25px;
-    margin-left: 1500px;
+    margin-left: 1550px;
     margin-top: 10px;
     color: white;
 }
 
 .next3{
  height: 830px;
- background-image: linear-gradient(to left, rgba(255,0,0,0), rgba(39, 56, 164)), url(img/Silence_Please.jpg);
+ background-image: linear-gradient(to left, rgba(255,0,0,0),rgba(1,56,119,255)), url(img/man.jpeg);
  background-size: cover;
 }
-.n3 i {
+.n3 img {
     margin-top: 250px;
-    margin-left: 150px;
-    
+    margin-left: 250px;
+
 }
 .n3 h1{
     font-size: 50px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 15px;
     color: white;
 }
 
 .n3 p{
     font-size: 25px;
-    margin-left: 100px;
+    margin-left: 200px;
     margin-top: 10px;
     color: white;
 }
 
 .next4{
     height: 830px;
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(39, 56, 164)), url(img/carbc1.jpeg);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(1,56,119,255)), url(img/piccc.jpeg);
     background-size: cover;
 }
 .n4 img {
-    margin-top: 150px;
-    margin-left: 1400px;
-    
+    margin-top: 250px;
+    margin-left: 1500px;
+
 }
 .n4 h1{
     font-size: 50px;
-    margin-left: 1350px;
-    margin-top: -50px;
+    margin-left: 1300px;
+    margin-top: 15px;
     color: white;
 }
 
 .n4 p{
     font-size: 25px;
-    margin-left: 1400px;
+    margin-left: 1380px;
     margin-top: 10px;
     color: white;
 }
-.form {
-    flex: 1;
-}
 
-    .form input[type="text"], .form input[type="email"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        border-radius: 5px;
-        border: none;
-        background-color: #f2f2f2;
-        font-size: 16px;
-        color: #333;
-    }
-
-    .form input[type="submit"] {
-        background-color: #0077b6;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-.footer {
-    margin-top: 10px;
-    height: 150px;
-    background-color: #2738A4;
-    
-}
 
 
 footer {
@@ -516,7 +487,7 @@ li i {
     color: white;
     text-decoration: none;
     position: relative;
-    right: 800px;
+    right: 900px;
     font-size: 30px;
     bottom: 20px;
 }
@@ -721,7 +692,7 @@ li i {
 }
 @media (max-width: 1290px) {
     .r{
-        min-width: 120%;
+      min-width: 120%;
         right: 240px;
     }
     .r img{

@@ -17,14 +17,44 @@
 <body>
 
     <div class="container">
+        <div class="navbar">
+            <div class="container-icon">
+                <img class="primary"src="img/Legacy_Bank.png" alt=""></a>
+            </div>
 
-        <div class="header">
-            <center>
-                <img src="img/Legacy_Bank.png">
-            </center>
-        </div>
+            <ul class="nav-list"id="nav-list">
+                <li class="list-item">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="list-item">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="list-item">
+                    <a href="index.html#services">Services</a>
+                </li>
+                <li class="list-item">
+                    <a href="contact.html">Contact us</a>
+                </li>
+            </ul>
+            <div class="menu" id="toggle-button">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
 
-        <div class="main">
+        </div>    </div>
+
+    <script>
+        const toggleButton= document.getElementById('toggle-button');
+        const navList= document.getElementById('nav-list');
+
+        toggleButton.addEventListener("click", () =>{
+            navList.classList.toggle('active');
+
+        })
+    </script>
+
+    <div class="main">
             <div class="box">
                 <h1>Referral Bonuses</h1><br>
                 <p>Referral bonuses are a common incentive offered by banks to encourage customers to refer new clients.
@@ -98,10 +128,10 @@
                     <h3>Quick Links</h3>
                     <div class="border1"></div>
                     <ul>
-                        <a href="#"><li>Home</li></a>
-                        <a href="#"><li>Search</li></a>
-                        <a href="#"><li>Contact</li></a>
-                        <a href="#"><li>About</li></a>
+                        <a href="index.html"><li>Home</li></a>
+                        <a href="chatBot.html"><li>ChatBot</li></a>
+                        <a href="contact.html"><li>Contact</li></a>
+                        <a href="about.html"><li>About</li></a>
                     </ul>
                 </div>
 

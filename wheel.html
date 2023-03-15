@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="wheel.css">
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a href="index.html" class="link">GO BACK</a>
+
+<button id="spin">spin</button>
+<span class="arrow"></span>
+<div class="arrow-container">
+  <div class="arrow"></div>
+</div>
+
+<div class="container">
+  <div class="one">CAR</div>
+  <div class="two">FREE MEAL</div>
+  <div class="three">VOUCHER</div>
+  <div class="four">FREE TRIP (GERMANY)</div>
+  <div class="five">TWO MOVIE TICKETS</div>
+  <div class="six">FREE COMPUTER</div>
+  <div class="seven">DISCOUNT ON SHOPS</div>
+  <div class="eight">YASWATER WORLD11 TICkET</div>
+</div>
+<script>
+  let container = document.querySelector('.container');
+  let btn = document.getElementById('spin');
+  let number = Math.ceil(Math.random()*1000);
+
+  btn.addEventListener('click', function() {
+    let deg = Math.floor(5000 + number);
+    container.style.transform = `rotate(${deg}deg)`;
+    setTimeout(function() {
+      let currentDiv = document.querySelector('.container div:nth-child(1)');
+      let result = currentDiv.innerHTML;
+      console.log(result);
+
+    }, 5000);
+
+
+  });
+</script>
+</body>
+</html>
+<style>* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.styled-link {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.styled-link:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-radius: 50%;
+  border: 15px solid beige;
+  position: relative;
+  overflow: hidden;
+  transition: 5s;
+}
+
+.container div {
+  height: 50%;
+  width: 200px;
+  position: absolute;
+  clip-path: polygon(100% 0, 50% 100%, 0 0);
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  left: 135px;
+}
+
+.container .one {
+  background-color: blueviolet;
+  left: 50%;
+}
+
+.container .two {
+  background-color: orange;
+  transform: rotate(45deg);
+}
+
+.container .three {
+  background-color: green;
+  transform: rotate(90deg);
+}
+
+.container .four {
+  background-color: deeppink;
+  transform: rotate(135deg);
+}
+
+.container .five {
+  background-color: chartreuse;
+  transform: rotate(180deg);
+}
+
+.container .six {
+  background-color: deepskyblue;
+  transform: rotate(225deg);
+}
+
+.container .seven {
+  background-color: gold;
+  transform: rotate(270deg);
+}
+
+.container .eight {
+  background-color: tomato;
+  transform: rotate(315deg);
+}
+
+.arrow-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 0;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid white;
+  transform: rotate(45deg);
+}
+
+
+
+#spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  background-color: black;
+  text-transform: uppercase;
+  border: 8px solid wheat;
+  font-weight: bold;
+  font-size: 20px ;
+  color: white;
+  width: 80px;
+  height: 80px;
+  font-family: sans-serif;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1px;
+
+
+}
+</style>

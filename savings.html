@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="save2.css">
+  <title>save</title>
+
+  <script>
+    function myFunction1() {
+      var info1 = document.getElementById("card1");
+      if (info1.style.display === "none") {
+        info1.style.display = "block";
+      } else {
+        info1.style.display = "none";
+      }
+    }
+
+    function myFunction2() {
+      var info2 = document.getElementById("card2");
+      if (info2.style.display === "none") {
+        info2.style.display = "block";
+      } else {
+        info2.style.display = "none";
+      }
+    }
+
+    function myFunction3() {
+      var info3 = document.getElementById("card3");
+      if (info3.style.display === "none") {
+        info3.style.display = "block";
+      } else {
+        info3.style.display = "none";
+      }
+    }
+
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <center>
+        <a href="index.html"><img src="img/Legacy_Bank.png"></a>
+      </center>
+    </div>
+
+    <div class="main">
+      <div class="box">
+        <h1>SAVING ACCOUNTS</h1><br>
+        <p>A savings account is a type of bank account that is designed to help individuals save money over
+          time.<br><br>
+          Savings accounts are considered low-risk and are insured by the government up to a certain amount, making them
+          a secure way to save money.
+        </p>
+        <button>Apply Now</button>
+      </div>
+    </div>
+
+    <div class="next">
+      <h1>Key Benefits</h1>
+      <div class="r">
+        <div class="img1"><img src="img/credit-cards.png" width="190" height="200">
+          <p>Free Legacy Bank<br> Visa Debit Card.</p>
+        </div>
+
+        <div class="img2"><img src="img/cal.png" width="190" height="200">
+          <p>Standing Instruction.</p>
+        </div>
+        <div class="img3"><img src="img/char.png" width="190" height="200">
+          <p>Expected quarterly<br> profits.</p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="next2">
+      <div class="b">
+        <center>
+          <br><br>
+          <h1>Legacy Credit Cards</h1>
+          <p>Buy everything you want now but Pay Later</p>
+        </center>
+        
+        <button onclick="myFunction1()">About</button>
+        <div id="card1">
+          <center>
+            <p>Get 200AED back on your first time using the credit card</p>
+          </center>
+          <div class="point">
+            <h1>➡</h1>
+          </div>
+          <center>
+            <p>Credit cards offer greater protection against fraud than debit cards or cash</p>
+          </center>
+          <div class="point">
+            <h1>➡</h1>
+          </div>
+          <center>
+            <p>Get AED 1,500 monthly cashback with Legacy Credit Cards</p>
+          </center>
+          <div class="point">
+            <h1>➡</h1>
+          </div>
+          </div>
+
+          <div class="info">
+            <p>If you are interested fill this form</p>
+            <form>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name"><br>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email"><br>
+
+              <label for="message">Message:</label>
+              <input type="message" id="message" name="message"><br>
+
+              <input type="submit" value="Submit">
+              </form>
+        </div>
+      </div>
+      </div>
+
+      <div class="next3">
+        <div class="b">
+          <center>
+            <br><br>
+            <h1>Legacy Sure</h1>
+            <p>Protect yourself aand your family from life's unexcpected moments</p>
+          </center>
+          <button onclick="myFunction2()">About</button>
+          <div id="card2">
+            <center>
+              <p>Up tp AED 400,000 cash benefits</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+            <center>
+              <p>Premimus start from AED 43 per month</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+            <center>
+              <p>Ability to cover spouse for a low additional cost</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+          </div>
+
+            <div class="info">
+              <p>If you are interested fill this form</p>
+                            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="message">Message:</label>
+                <input type="message" id="message" name="message"><br>
+
+                <input type="submit" value="Submit">
+
+              </form>
+            </div>
+
+         
+
+
+        </div>
+      </div>
+
+      <div class="next4">
+        <div class="b">
+          <center>
+            <br><br>
+            <h1>Legacy Cheque Book</h1>
+          </center>
+          <button onclick="myFunction3()">About</button>
+          <div id="card3">
+            <center>
+              <p>Convenient payment method</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+            <center>
+              <p>Convenient payment method</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+            <center>
+              <p>Enhanced credibility</p>
+            </center>
+            <div class="point">
+              <h1>➡</h1>
+            </div>
+            </div>
+
+            <div class="info">
+              <p>If you are interested fill this form</p>
+                            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="message">Message:</label>
+                <input type="message" id="message" name="message"><br>
+
+                <input type="submit" value="Submit">
+
+                
+              </form>
+            
+
+          </div>
+        </div>
+      </div>
+
+
+
+      
+    <footer>
+      <div class="inner-footer">
+
+        <div class="title">
+          <h1>Legacy Bank</h1>
+          <p>Legacy Bank is renowned for its commitment to providing a safe and secure banking experience to its customers.Legacy Bank ensures that every transaction is safe and secure. </p>
+
+        </div>
+
+
+
+        <div class="footer-items">
+          <h3>Quick Links</h3>
+          <div class="border1"></div>
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="chatBot.html"><li>ChatBot</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+            <a href="about.html"><li>About</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-items">
+          <h3>Bank us</h3>
+          <div class="border1"></div>
+          <ul>
+            <a href="#"><li>Mobile Banking</li></a>
+            <a href="#"><li>Internet Banking</li></a>
+            <a href="#"><li>SMS Banking</li></a>
+            <a href="#"><li>Chat Banking</li></a>
+          </ul>
+        </div>
+
+        <div class="footer-items">
+          <h3>Contact us</h3>
+          <div class="border1"></div>
+          <ul>
+            <a href="#"><li><i class="fa fa-map-marker" aria-hidden="true"></i>Jumirah beach, Dubai</li></a>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>044697654</li>
+            <a href="https://mail.google.com/mail/u/0/"><li><i class="fa fa-envelope" aria-hidden="true"></i>customerservices@legacy.com</li></a>
+            <li><i class="fa-solid fa-fax"></i>44-208-1234567</li>
+          </ul>
+        </div>
+
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.164624506729!2d55.49228731517304!3d25.26504698386478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f557782004f9%3A0x6516398b61164c41!2s1020avenue!5e0!3m2!1sen!2sae!4v1675333136811!5m2!1sen!2sae" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div class="social-media">
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+          </div>
+        </div>
+      </div>
+
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
