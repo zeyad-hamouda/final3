@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Demo styles -->
+    <style>
+      
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      h1{
+text-align: center;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #edc9afcf ;
+			height: 400px;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+			height: 400px;
+}
+
+.image img {
+  height: 370px;
+  width: 370px;
+  border-radius: 20px;
+  margin-left: 10px;
+
+
+}
+
+.image2 img{
+  height: 370px;
+  width: 370px;
+  border-radius: 20px;
+  margin-right: 10px;
+
+}
+
+.text1 {
+  font-size: 27px;
+  padding-left: 30px;
+  text-align: left;
+  justify-content: flex-end;
+ 
+}
+
+.text2 {
+  font-size: 27px;
+  padding-right: 30px;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+      .header {
+        height: 150px;
+        background-color: #2738A4;
+      }
+
+      .header img {
+        margin-top: -30px;
+        width: 90%;
+        max-width: 230px
+      }
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    min-height: 560px;
+}
+
+
+.box {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 120px;
+    border-color: #2738A4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+    
+}
+
+.box h1 {
+    margin-left: 260px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    display: flex;
+    
+}
+
+.box p {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 16px;
+  
+    margin-right: 50px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: justify;
+   
+}
+html {
+  font-family:sans-serif;
+}
+
+.box button {
+    margin-left: 250px;
+    background-color: #2738A4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+   
+}
+
+.box button:hover {
+    background-color: red;
+}
+
+.next h1{
+    text-align: center;
+    margin-top: 30px;
+}
+.next img{
+    width:150px;
+    height:150px;
+    margin-top: 100px;
+    margin-left: 350px;
+
+}
+.next p{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 250px;
+
+}
+.r{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: 0px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: 0px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+
+
+.container2 .rows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.col{
+    min-width: 250px;
+    color:#f2f2f2f2;
+    font-family: monofonto;
+    padding:0 2rem;
+}
+.col .logo{
+    width: 200px;
+    margin-bottom:25px;
+}
+.col h3{
+    color:white;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.col img{
+    margin-bottom: -40px;
+}
+.col h3::after{
+    content: '';
+    height:5px;
+    width:0px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.3s ease;
+
+}
+.col h3:hover::after{
+    width:30px
+}
+.col .social a i{
+    color:white;
+    margin-top:2rem;
+    margin-right: 5px;
+    transition: 0.3s ease;
+    font-size: 40px;
+}
+.col .social a i:hover{
+    transform: scale(1.5);
+    filter:grayscale(50);
+}
+.col .links a{
+    display: block;
+    text-decoration: none;
+    color:#f2f2f2;
+    margin-bottom: 5px;
+    position: relative;
+    transition: 0.3s ease;
+}
+.col .links a::before{
+    content:'';
+    height: 16px;
+    width:3px;
+    position: absolute;
+    top:5px;
+    left:-10px;
+    background-color: black;
+    transition: 0.5s ease;
+    opacity: 0;
+}
+.col .links a:hover::before{
+    opacity: 1;
+}
+.col .links a:hover{
+    transform: translateX(-8px);
+    color:black;
+}
+.col .contact-details{
+    display: inline-flex;
+    justify-content: space-between;
+}
+.col .contact-details i{
+    margin-right:15px;
+}
+
+.rows .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2rem 0;
+}
+.row .form input{
+    background-color: #1a1c20ff;
+    border:0;
+    outline:none;
+    padding:14px 20px;
+    border-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form button{
+    padding:14px 20px;
+    border:0;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: #ff014fff;
+}
+
+
+
+@media screen and (max-width: 1250px) {
+  .box {
+    max-width: 100%;
+  }
+  .box h1 {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .box p {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  .box button {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  .next img {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-left: 200px;
+  }
+  .next p {
+    font-size: 16px;
+    margin-left: 150px;
+  }
+  .r, .row {
+    margin-left: 0px;
+  }
+  .col {
+    min-width: 100%;
+    padding: 0px;
+  }
+  .col h3 {
+    font-size: 20px;
+  }
+  .col img {
+    display: none;
+  }
+  .col .links a::before {
+    display: none;
+  }
+}
+
+
+      
+
+.swiper {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      
+
+      
+
+     .swiper-slide img{
+    height: 200px;
+    width: 280px;
+    border-radius: 15px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    filter: brightness(120%);
+   filter: contrast(120%);
+   filter: drop-shadow(10px 10px 10px rgb(123, 122, 122));
+
+
+}
+
+.image-container:hover .overlay {
+    background-color: #2738A4;
+  opacity: 1;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  
+}
+
+
+
+
+.next3 img{
+height: 50px;
+
+width: 50px;
+}
+
+.next3 p{
+color: white;
+font-size: 25px;
+margin-left: 20px;
+}
+
+.next4{
+    height: 530px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.406), rgb(39, 56, 164)), url();
+    background-size: cover;
+
+}
+
+.con1 {
+    width: 370px;
+    height: 450px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: #2738A4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+    padding: 30px;
+    margin-left: 800px;
+    
+}
+
+.con1 p{
+  font-size: 20px;
+  font-weight: bold;
+}
+   
+    
+.con {
+    width: 370px;
+    height: 450px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border-color: #2738A4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+    padding: 30px;
+    margin-left: 100px;
+    
+}
+
+.con form{
+  font-size: 20px;
+  font-weight: bold;
+
+  
+}
+
+
+input[type="text"] {
+  height: 30px;
+  width: 150px;
+  font-size: 19px;
+}
+
+.con button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+   
+}
+
+
+
+
+
+.n2 p{
+    font-size: 25px;
+    margin-left: 600px;
+    padding: 13px;
+    margin-top: 10px;
+    color:rgb(255, 255, 255);
+    text-align: justify;
+}
+.n2 h1{
+    font-size: 50px;
+    margin-left: 600px;
+    margin-top: 15px;
+    color: white;
+}
+.n3 h1{
+  font-size: 50px;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+
+    
+}
+.n4 h1{
+  font-size: 50px;
+    color: white;
+    
+ 
+}
+
+.n4  p{
+    font-size: 20px;
+    color: white;
+}
+.n4 form {
+    background-color: rgba(0, 0, 0, 0.861);
+    border: 3px solid black;
+    padding: 20px;
+    height: 400px;
+    width: 380px;
+    margin-left: 450px;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+form input[type="text"],
+form input[type="email"]{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+
+}
+form input[type="message"]{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+}
+
+
+form input[type="submit"] {
+  background-color: #2738A4;
+    color: #fff;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+
+  
+}
+
+form input[type="submit"]:hover {
+    background-color: red;
+}
+
+.box img{
+    height: 150px;
+    width: 100px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+
+.bg img{
+    background-repeat: no-repeat;
+    align-items: center;
+    height: 600px;
+width: 100%;    
+}
+
+
+    </style>
+
+    <style>
+    #my-form {
+    background-color: rgba(0, 0, 0, 0.685);
+  border: 1px solid #ccc;
+  padding: 10px;
+  max-width: 250px;
+  margin-left: 170px;
+  border-radius: 10px;
+  color: #000000;
+  height: 200px;
+  margin-bottom: 80px;
+  
+
+}
+
+
+
+/* Style the form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 25px;
+
+}
+
+/* Style the form inputs */
+
+
+/* Style the submit button */
+
+
+/* Style the tables */
+
+
+
+
+
+
+.transfer-btn {
+  background-color: #2738A4;
+  color: white; /* Set the text color */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add rounded corners to the button */
+  cursor: pointer; /* Change the cursor on hover */
+  height: 40px;
+  width: 70px;
+  font-size: 15px;
+margin-left: 35px;
+}
+
+#return-btn {
+  background-color: #2738A4;
+  color: white; /* Set the text color */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add rounded corners to the button */
+  cursor: pointer; /* Change the cursor on hover */
+  height: 40px;
+  width: 70px;
+  font-size: 15px;
+}
+.transfer-btn:hover {
+    background-color: red;
+}
+#return-btn:hover {
+    background-color: red;
+}
+
+#deduction-input {
+ margin-left: 25px;
+}
+
+</style>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .game{
+        width: 550px;
+        height: 250px;
+        border: 1px solid black;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0.521);
+        margin: auto;
+    }
+    #character{
+        width: 20px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+        position:relative;
+        left: 20px;
+        top: 195px;
+    }
+    .animate{
+        animation: jump 0.3s linear;
+    }
+    @keyframes jump{
+        0%{top: 150px;}
+        30%{top: 100px;}
+        70%{top: 100px;}
+        100%{top: 150px;}
+    }
+
+    #block{
+      background-color: #2738A4;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 178px;
+        left: 500px;
+        animation: block 1s infinite linear;
+    }
+    @keyframes block{
+        0%{left: 500px}
+        100%{left: -20px}
+    }
+    p{
+        text-align: center;
+    }
+    #startButton {
+      background-color: #2738A4;
+  color: white; /* Set the text color */
+  border: none; /* Remove the button border */
+  border-radius: 4px; /* Add rounded corners to the button */
+  cursor: pointer; /* Change the cursor on hover */
+  height: 40px;
+  width: 70px;
+  font-size: 15px;
+}
+
+.next2 img{
+    height: 450px;
+    width: 800px;
+    margin-left: 430px;
+    margin-top: -350px;
+}
+
+    footer {
+        width: 100%;
+        background: #013877;
+        display: block;
+    }
+
+    .inner-footer {
+        width: 95%;
+        margin: auto;
+        padding: 10px 10px;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        justify-content: center;
+
+    }
+
+    .footer-items {
+        width: 14%;
+        height: 20%;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 24px;
+        position: relative;
+        right: 100px;
+    }
+    .map {
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 24px;
+        position: relative;
+        left: 100px;
+        top: 17px;
+        min-height: 10px;
+
+    }
+    .title {
+        width: 25%;
+        height: 20%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 24px;
+        position: relative;
+        right: 130px;
+
+    }
+
+
+    .title p {
+        font-size: 23px;
+        justify-content: left;
+        line-height: 26px;
+        color: #fff;
+    }
+
+    .title h1 {
+        color: #fff;
+        margin-bottom: 5px;
+        position: relative;
+        right: 5px;
+
+    }
+
+    .border1 {
+        height: 3px;
+        width: 40px;
+        background: aqua;
+        color: aqua;
+        background-color: aqua;
+        border: 0px;
+    }
+
+    ul {
+        list-style: none;
+        color: #fff;
+        font-size: 22px;
+        letter-spacing: 1px;
+        min-width: 400px;
+    }
+
+    ul a {
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        transition: 0.3s;
+
+    }
+
+    ul a:hover {
+        color: rgb(208, 200, 200);
+    }
+
+    ul li {
+        margin: 14px 0;
+        height: 25px;
+    }
+
+    li i {
+        margin-right: 20px;
+    }
+
+    .social-media {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        align-content: center;
+        font-size: 25px;
+        margin-top: -30px;
+
+    }
+
+    .social-media a {
+        text-decoration: none;
+    }
+
+    .social-media i {
+        height: 25px;
+        width: 25px;
+        margin: 20px -2px;
+        padding: 24px;
+        color: #fff;
+        transition: 0.5s;
+        font-size: 40px;
+    }
+
+    .social-media i:hover {
+        transform: scale(1.5);
+    }
+
+    .cont .r img{
+        width: 9rem;
+        height: 9rem;
+        margin-left: 20rem;
+    }
+
+    @media screen and (max-width: 1275px) {
+        .footer-items {
+            width: 50%;
+        }
+    }
+
+
+    @media screen and (max-width: 660px) {
+        .footer-items {
+            justify-content: center;
+            width: 60%;
+        }
+        .title{
+            width: 60%;
+        }
+        .map{
+            widh:60%;
+            margin-right: 200px;
+        }
+        .box{
+            margin-top: 200px;
+            width: 60%;
+        }
+        .box p{
+            font-size: 24px;
+        }
+        .box h1{
+            font-size: 30px;
+        }
+        .main img{
+            height: 100px;
+            width: 110px;
+            position: relative;
+            right: 330px;
+            top: 200px;
+
+        }
+        .n4 form{
+            position: relative;
+            right: 420px;
+        }
+        .n2 h1{
+            position: relative;
+            right: 560px;
+            font-size: 40px;
+            bottom: 100px;
+
+
+        }
+        .n2 img{
+            position: relative;
+            right: 800px;
+            top: 200px;
+        }
+
+    }
+
+
+    @media only screen and (min-width: 601px) and (max-width: 1344px) {
+        .box h1{
+
+            font-size: 40px;
+        }
+        .box p{
+            font-size: 34px;
+        }
+        .main img{
+            width: 40%;
+            margin-left: 550px;
+        }
+        .n2 h1{
+            margin-right: 200px;
+        }
+        .n2 p{
+            margin-left: 440px;
+        }
+        .n2 img{
+            margin-left: 730px;
+        }
+        .n4 form{
+            position: relative;
+            left: -2rem;
+        }
+        .footer-items{
+            width: 12%;
+        }
+        .footer-items h3{
+            min-width: 200px;
+        }
+        .title{
+            width: 22%;
+        }
+        .title h1{
+            left: -7px;
+
+        }
+        .title p{
+            width: 114%;
+
+        }
+        .map{
+            width: 30%;
+        }
+
+    }
+
+
+    .navbar{
+        background-color: darkblue;
+        color: #083ff3;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 20px;
+        position: relative;
+        min-height: 120px;
+    }
+
+    .nav-list{
+        list-style-type: none;
+    }
+
+    .nav-list .list-item{
+        display:inline-block;
+        padding: 20px 10px;
+        font-size: 20px;
+    }
+    .navbar ul a{
+        color: white;
+        text-decoration: none;
+        position: relative;
+        right: 900px;
+        font-size: 30px;
+        bottom: 20px;
+    }
+    .navbar img{
+        margin-left: 300px;
+        position: absolute;
+        top: -40px;
+        left: 370px;
+        height: 200px;
+
+    }
+    .navbar .sign a{
+        color: white;
+        position: relative;
+        top: 0px;
+        padding-right: 20px;
+        text-decoration: none;
+        font-size: 28px;
+        left: 800px;
+    }
+    .navbar a:hover{
+        color: aqua;
+    }
+    .primary{
+        height: 9rem;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-line{
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        margin-bottom: 4px;
+    }
+    @media (max-width: 1300px) {
+        .box h1 {
+            position: relative;
+            bottom: 70px;
+        }
+        .box p{
+            position: relative;
+            bottom: 70px;
+            max-height: 350px;
+        }
+        .r img{
+            width: 200px;
+
+        }
+        .r{
+            position: relative;
+            left: 50px;
+        }
+        .navbar .sign  {
+            margin-right: 220px;
+
+        }
+
+        .navbar ul{
+            margin-right: 120px;
+        }
+
+
+    }
+    @media only screen and (min-width: 601px) and (max-width: 1344px) {
+
+        .navbar{
+            background-color: darkblue;
+            color: #083ff3;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 20px;
+            position: relative;
+            min-height: 120px;
+        }
+
+        .nav-list{
+            list-style-type: none;
+        }
+
+        .nav-list .list-item{
+            display:inline-block;
+            padding: 20px 10px;
+            font-size: 20px;
+        }
+        .navbar ul a{
+            color: white;
+            text-decoration: none;
+            position: relative;
+            left: -650px;
+            font-size: 30px;
+            bottom: 20px;
+        }
+        .navbar img{
+            margin-left: 300px;
+            position: absolute;
+            top: -40px;
+            left: 200px;
+            height: 200px;
+            width: 200px;
+
+        }
+        .navbar a:hover{
+            color: aqua;
+        }
+        .primary{
+            height: 9rem;
+        }
+        .menu{
+            display: none;
+        }
+        .menu-line{
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            margin-bottom: 4px;
+        }
+        .navbar .sign a{
+            color: white;
+            position: relative;
+            top: 0px;
+            right:-650px;
+            font-size: 30px;
+
+        }
+    }
+
+    @media all and (max-width: 480px){
+        .navbar{
+            flex-direction: column;
+
+        }
+        .navbar .container-icon{
+            width: 100%;
+        }
+        .menu{
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+        .nav-list{
+            list-style-type: none;
+            width: 10%;
+            display: none;
+            z-index: 99;
+        }
+        .nav-list .list-item{
+            display: block;
+            border-top: 1px solid white;
+        }
+        .navbar img{
+            margin-left: -380px;
+            margin-top: -10px;
+            position: relative;
+        }
+        .navbar .sign{
+            position: relative;
+            bottom: 170px;
+            right: 600px;
+
+        }
+        .navbar ul a{
+            left: 150px;
+        }
+        .primary{
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .active{
+            display: block;
+
+
+        }
+
+    }
+
+</style>
+
+  </head>
+
+  <body>
+
+  <div class="container">
+
+
+
+      <div class="container">
+
+          <div class="navbar">
+              <div class="container-icon">
+                  <img class="primary"src="../../../../../CLionProjects/finalprojectlast/img/Legacy_Bank.png" alt=""></a>
+              </div>
+              <div class="sign">
+                  <a href="#"><i class="fas fa-sign-in"></i> Sign In</a>
+                  <a href= "#"> <i class="fa-solid fa-user-plus"></i> Sign up</a>
+              </div>
+
+              <ul class="nav-list"id="nav-list">
+                  <li class="list-item">
+                      <a href="#">Home</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="#">About</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="#">Services</a>
+                  </li>
+                  <li class="list-item">
+                      <a href="#">Contact us</a>
+                  </li>
+              </ul>
+              <div class="menu" id="toggle-button">
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+                  <div class="menu-line"></div>
+              </div>
+
+          </div>
+      </div>
+
+      <script>
+          const toggleButton= document.getElementById('toggle-button');
+          const navList= document.getElementById('nav-list');
+
+          toggleButton.addEventListener("click", () =>{
+              navList.classList.toggle('active');
+
+          })
+      </script>
+        <div class="main">
+            <div class="box">
+                <center><h1>GIFTING</h1></center>
+                <p>Gifting is a way to express love, appreciation, and gratitude towards someone. It can be a simple gesture or a grand gesture, but it's always the thought that counts. Choosing the right gift shows that you know and understand the person. A gift can bring joy, happiness, and a sense of connection. Gifting is an art that requires creativity, empathy, and generosity.</p>
+                <br><br>
+                <button>Learn More</button>
+            </div>
+            <div class="bg"><img src="../../../../../CLionProjects/finalprojectlast/img/gifts.jpg" alt="card"></div>
+
+
+</div>  </div>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../../../../../CLionProjects/finalprojectlast/img/polish.PNG" alt="Example Image"></div>
+                   <div class="swiper-slide"><img src="../../../../../CLionProjects/finalprojectlast/img/mw.PNG" alt="Example Image"></div>
+                          <div class="swiper-slide"><img src="../../../../../CLionProjects/finalprojectlast/img/fm.PNG" alt="Example Image"></div>
+  </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+
+  </div><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",},});
+        </script>
+
+  
+    <h1>For your beloved ones</h1>
+    <br><br>
+<div class="next2">
+  <div class="n2"> 
+   
+
+    <form id="my-form">
+      <label for="deduction-input">Enter amount :</label>
+      <input type="number" id="deduction-input" name="deduction" required><br><br>
+      <button type="submit" class="transfer-btn">Transfer</button>
+      <button onclick="location.href='memberadd.html'" id="return-btn">return</button>
+    </form>
+    
+    <script>
+      // Retrieve the amount from local storage or set it to 1000 if it doesn't exist
+      let amount = parseInt(localStorage.getItem('amount')) || 1000;
+    
+      // Add an event listener to the form to handle the deduction process
+      document.getElementById('my-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+    
+        // Parse the input as an integer
+        const deduction = parseInt(document.getElementById('deduction-input').value);
+    
+        if (!isNaN(deduction)) {
+          if (deduction > amount) {
+            // Deduction amount is greater than the current balance, so don't allow the deduction
+            alert('You cannot deduct an amount greater than the current balance.');
+          } else {
+            // Deduct the amount from the variable
+            amount -= deduction;
+    
+            // Store the new amount in local storage
+            localStorage.setItem('amount', amount);
+    
+            // Send a notification to the user
+            alert(`Successfully deducted ${deduction}. The new balance is ${amount}.`);
+            
+           
+          }
+        } else {
+          alert('Invalid input. Please enter a valid number.');
+        }
+      });
+    </script>
+    
+  <img src="../../../../../CLionProjects/finalprojectlast/img/gifitng.jpg" alt="">
+
+</div>
+
+    
+ 
+    
+
+
+<div class="next4" id="next4">
+  <div class="n4">
+    <br><br><h1>Want to earn gift points? PLAY</h1><br>
+    <div class="game">
+        <div id="character"></div>
+        <div id="block"></div>
+    </div>
+    <br>
+    <p>Gift Points: <span id="scoreSpan"></span></p><br>
+    <center><button id="startButton" onclick="startGame()">Start</button></center>
+    <script>
+        var character = document.getElementById("character");
+        var block = document.getElementById("block");
+        var counter = 0;
+        var intervalId;
+        var gameStarted = false;
+
+        function jump() {
+            if (character.classList == "animate") {
+                return;
+            }
+            character.classList.add("animate");
+            setTimeout(function () {
+                character.classList.remove("animate");
+            }, 300);
+        }
+
+        function startGame() {
+            if (!gameStarted) {
+                gameStarted = true;
+                document.getElementById("startButton").style.display = "none";
+                intervalId = setInterval(function () {
+                    let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+                    let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
+                    if (blockLeft < 20 && blockLeft > -20 && characterTop >= 130) {
+                        block.style.animation = "none";
+                        clearInterval(intervalId);
+                        alert("oops... Gift Points: " + Math.floor(counter / 100));
+                        counter = 0;
+                        block.style.animation = "block 1s infinite linear";
+                        gameStarted = false;
+                        document.getElementById("startButton").style.display = "block";
+                    } else {
+                        counter++;
+                        document.getElementById("scoreSpan").innerHTML = Math.floor(counter / 100);
+                    }
+                }, 10);
+            }
+        }
+
+        document.addEventListener("keydown", function (event) {
+            if (event.code === "Space") {
+                jump();
+            }
+        });
+    </script>
+
+      
+                            
+</div>
+  </div>
+
+
+
+
+
+
+
+
+  <script src="java.js"> </SCript>
+    <footer>
+        <div class="inner-footer">
+
+            <div class="title">
+                <h1>Legacy Bank</h1>
+                <p>Legacy Bank is renowned for its commitment to providing a safe and secure banking experience to its customers.Legacy Bank ensures that every transaction is safe and secure. </p>
+
+            </div>
+
+
+
+            <div class="footer-items">
+                <h3>Quick Links</h3>
+                <div class="border1"></div>
+                <ul>
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Search</li></a>
+                    <a href="#"><li>Contact</li></a>
+                    <a href="#"><li>About</li></a>
+                </ul>
+            </div>
+
+            <div class="footer-items">
+                <h3>Bank us</h3>
+                <div class="border1"></div>
+                <ul>
+                    <a href="#"><li>Mobile Banking</li></a>
+                    <a href="#"><li>Internet Banking</li></a>
+                    <a href="#"><li>SMS Banking</li></a>
+                    <a href="#"><li>Chat Banking</li></a>
+                </ul>
+            </div>
+
+            <div class="footer-items">
+                <h3>Contact us</h3>
+                <div class="border1"></div>
+                <ul>
+                    <a href="#"><li><i class="fa fa-map-marker" aria-hidden="true"></i>Jumirah beach, Dubai</li></a>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>044697654</li>
+                    <a href="https://mail.google.com/mail/u/0/"><li><i class="fa fa-envelope" aria-hidden="true"></i>customerservices@legacy.com</li></a>
+                    <li><i class="fa-solid fa-fax"></i>44-208-1234567</li>
+                </ul>
+            </div>
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.164624506729!2d55.49228731517304!3d25.26504698386478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f557782004f9%3A0x6516398b61164c41!2s1020avenue!5e0!3m2!1sen!2sae!4v1675333136811!5m2!1sen!2sae" width="300" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <div class="social-media">
+
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+  </body>
+</html>
