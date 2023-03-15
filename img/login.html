@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Member Form</title>
+	<style>
+		#add-member-form {
+			display: none;
+		}
+
+		button {
+			margin-left: 250px;
+			background-color: black;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+    <form id="my-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      
+        <button type="submit">Save</button>
+      </form>
+	
+        <script>const form = document.getElementById('my-form');
+
+        form.addEventListener('submit', function(event) {
+          event.preventDefault(); // prevent form submission
+        
+          // Retrieve input values from the form
+          const name = form.elements.name.value;
+          const email = form.elements.email.value;
+          const age = form.elements.age.value;
+        
+          // Create a JSON object to represent the user data
+          const user = {
+            name: name,
+            email: email,
+            age: age
+          };
+        
+          // Retrieve existing users from local storage or create empty array
+          const users = JSON.parse(localStorage.getItem('users')) || [];
+        
+          // Add new user to array and save to local storage
+          users.push(user);
+          localStorage.setItem('users', JSON.stringify(users));
+        
+          // Reset the form
+          form.reset();
+        });
+    </script>  <script>
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+
+    for (let i = 0; i < users.length; i++) {
+      const user = users[i];
+      console.log(`Name: ${user.name}, Email: ${user.email}, Age: ${user.age}`);
+    }
+</script>  
+         
+</body>
+</html>
